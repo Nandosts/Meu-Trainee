@@ -1,0 +1,33 @@
+.div-1 h1{
+    color: green; 
+    background-color: #ff08d7
+}
+
+.div-1 p{
+    color: red
+}
+
+.palavraroxa{
+    color: purple
+}
+
+.div-1 ul{
+    list-style-type: none;
+    color: purple
+}
+
+.paddinglista{
+    padding-bottom: 60px
+}
+
+.bodyclass{
+    background-color: white;
+}
+
+.EmBranco{
+    padding-bottom: 100px
+}
+.bodyclass a{
+    color: blue;
+    border: solid;
+}

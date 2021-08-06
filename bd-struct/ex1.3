@@ -1,0 +1,48 @@
+Table Fly as F {
+  leaving_time time
+  id_o_city int [ref: > O.id_o_city]
+  expec_leav_time time
+  arrival_time time
+  id_d_city int [ref: > D.id_d_city]
+  expec_arrival_t time
+  plane varchar [ref: > Pl.id_plane]
+  id_pilot int [ref: > P.anac_pilot]
+  id_passenger int [ref: < Ps.id_passenger]
+}
+
+Table Pilot as P {
+  anac_pilot int
+  name_pilot varchar
+  cpf_pilot varchar
+  rg_pilot varchar
+  email_pilot varchar
+  db_pilot date
+}
+
+Table Passengers as Ps {
+  id_passenger int
+  name_passenger varchar
+  cpf_passenger varchar
+  rg_passenger varchar
+  sex_passenger varchar
+  email_passenger varchar
+  db_passenger date
+}
+
+Table Plane as Pl{
+  id_plane int
+  model_plane varchar
+  register_plane varchar
+  seats_plane int
+}
+
+Table Origin_city as O {
+  id_o_city id
+  name_origin_city varchar
+}
+
+Table Destiny_city as D {
+  id_d_city int
+  name_destiny_city varchar
+}
+

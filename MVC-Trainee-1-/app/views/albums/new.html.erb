@@ -1,0 +1,19 @@
+<h1>Novo Album</h1>
+
+<%= form_with model: @album do |form| %>
+  <div class="field">
+    <%= form.label :album_name, 'Nome do album' %>
+    <%= form.text_field :album_name, value: @album.album_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artist, 'Artista' %>
+    <%= form.text_field :artist, value: @album.artist %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Criar Album" %>
+  </div>
+<% end %>
+
+<%= link_to 'Voltar', albums_path %>

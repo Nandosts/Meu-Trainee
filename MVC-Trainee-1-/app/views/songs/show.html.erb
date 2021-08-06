@@ -1,0 +1,28 @@
+<h1>Detalhes da música</h1>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @songs.name %>
+</p>
+
+<p>
+  <strong>É explícita?:</strong>
+  <%= @songs.explicity.explicity %>
+</p>
+
+<p>
+  <strong>Gênero:</strong>
+  <%= @songs.gender.gender %>
+</p>
+
+<p>
+  <strong>Album:</strong>
+  <%= @songs.album.album_name %>
+
+<p>
+  <strong>Adicionada em:</strong>
+  <%= @songs.created_at %>
+</p>
+
+<%= link_to 'Editar', edit_song_path(@songs) %> |
+<%= link_to 'Voltar', songs_path %>

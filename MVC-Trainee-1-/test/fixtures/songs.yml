@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  explicity: one
+  gender: one
+  album: one
+
+two:
+  name: MyString
+  explicity: two
+  gender: two
+  album: two

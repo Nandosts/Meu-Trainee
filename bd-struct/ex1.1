@@ -1,0 +1,34 @@
+Table Teachers as T {
+  id_teacher int
+  name_teacher varchar
+  cpf_teacher varchar
+  rg_teacher varchar
+  sex_teacher int
+  email_teacher varchar
+  db_teacher date
+  programs_teacher varchar
+  exptime_teacher int
+}
+
+Table Students as S {
+  id_student int
+  name_student varchar
+  cpf_student varchar
+  rg_student varchar
+  db_student date
+  adress_student varchar
+  id_city int [ref: > C.id_city]
+  id_state int [ref: > St.id_state]
+  teacher int [ref: > T.id_teacher]
+}
+
+Table City as C {
+  id_city int
+  name_city varchar
+}
+
+Table State as St {
+  id_state int
+  name_state varchar
+}
+

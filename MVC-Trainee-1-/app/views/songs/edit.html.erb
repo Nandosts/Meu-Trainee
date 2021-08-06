@@ -1,0 +1,29 @@
+<h1>Editar Música</h1>
+
+<%= form_with model: @songs do |form| %>
+  <div class="field">
+    <%= form.label :name, 'Nome' %>
+    <%= form.text_field :name, value: @songs.name  %>
+  </div>
+
+    <div class="field">
+    <%= form.label :explicity_id, 'É explicita?' %>
+    <%= form.select :explicity_id, options_for_select(@explicity.map {|explicity| [explicity.explicity, explicity.id] })%>
+
+  <div class="field">
+    <%= form.label :gender_id, 'Gênero musical:' %>
+    <%= form.select :gender_id, options_for_select(@gender.map {|gender| [gender.gender, gender.id] })%>
+
+
+  <div class="field">
+    <%= form.label :album_id, 'Album' %>
+    <%= form.select :album_id, options_for_select(@albums.map { |album| [album.album_name, album.id] }) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Atualizar Música" %>
+  </div>
+
+<% end %>
+
+<%= link_to 'Voltar', songs_path %>

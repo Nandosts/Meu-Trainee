@@ -1,0 +1,26 @@
+Table Dentists as D {
+  id_dentist int
+  cro_dentist int
+  name_dentist varchar
+  cpf_dentist varchar
+  rg_dentist varchar
+  sex_dentist varchar
+  email_dentist varchar
+  db_dentist date
+  spec_dentis varchar
+}
+
+Table consults as C {
+  id_client int [ref: > Cl.id_client]
+  id_dentist int [ref: > D.id_dentist]
+  id_consult int
+  date_consult date
+  id_room int [ref: < D.cro_dentist]
+}
+
+Table Clients as Cl {
+  id_client int
+  name_client varchar
+}
+
+

@@ -1,0 +1,28 @@
+<h1>Nova Música</h1>
+
+<%= form_with model: @songs do |form| %>
+  <div class="field">
+    <%= form.label :name, 'Nome da música' %>
+    <%= form.text_field :name %>
+  </div>
+
+    <div class="field">
+    <%= form.label :explicity_id, 'É explicita?' %>
+    <%= form.select :explicity_id, @explicity.collect {|explicity| [explicity.explicity, explicity.id] }%>
+
+  <div class="field">
+    <%= form.label :gender_id, 'Gênero musical:' %>
+    <%= form.select :gender_id, @gender.collect {|gender| [gender.gender, gender.id] }%>
+
+  <div class="field">
+    <%= form.label :album_id, 'Album' %>
+    <%= form.select :album_id, @albums.collect {|album| [album.album_name, album.id] }%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Adicionar Música" %>
+  </div>
+<% end %>
+
+<%= link_to 'Voltar', songs_path %>
+<%= link_to 'Página inicial', root_path %>

@@ -1,0 +1,36 @@
+<%= javascript_include_tag 'album' %>
+<html>
+<h1>Álbuns salvos:</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Título</th>
+    <th>Artista</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @albums.each do |album| %>
+    <tr>
+      <td id="like_album<%=album.id%>"><button onclick="Function('like_album<%= album.id %>')">Curtir</button></td>
+      <td> <div id= "album-<%= album.id %>" style="color:black"> <%= album.album_name %></div></td>
+      <td><%= album.artist %></td>
+      <td><%= link_to 'Detalhes', album_path(album) %></td>
+      <td><%= link_to 'Editar', edit_album_path(album) %></td>
+      <td><%= button_to 'Deletar', album_path(album.id), method: :delete %></td>      
+    </tr>
+    <tr>
+      <td> <p>Marcar como:</p> </td>
+      <td> <a href="#" onclick="heard('album-<%= album.id %>');">Ouvido</a></td>
+      <td> <a href="#" onclick="unheard('album-<%= album.id %>');">| Não ouvido |</a></td>
+      <td> <a href="#" onclick="unmark('album-<%= album.id %>');"> Desfazer marcação</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<div style='padding-bottom: 50px'></div>
+
+<%= link_to 'Novo Album', new_album_path %>
+<%= link_to 'Home', root_path %>
+
+</html>

@@ -1,0 +1,58 @@
+.div-geral {
+    background-image: url('img/Maserati-GranTurismo.jpg');
+    background-size: cover
+}
+
+.Titulo h4{
+    padding-top: 25px;
+    text-align: center;
+    color: #eeeeee;   
+    font-family: 'Teko', sans-serif;
+}
+
+.Titulo h2{
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+    color: #ffffff
+}
+
+.Trainee{
+    color: Blue
+}
+
+.container{
+    padding-top: 550px;
+    padding-left: 100px;
+    color: slategray;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+
+.dados{
+    color: black;
+}
+
+
+.d-flex{
+    flex-direction: column;
+}
+
+.container {
+    position: relative;
+}
+.center-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: auto;
+    max-width: 200px;
+    text-align: center;
+}
+.center-nav li{
+  text-align: center;
+  width:100%;
+  text-orientation: sideways-right;
+
+}

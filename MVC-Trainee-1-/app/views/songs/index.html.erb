@@ -1,0 +1,32 @@
+<h1>Músicas salvas</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>|Nome da música|</th>
+    <th>|É explicita?|</th>
+    <th>|Gênero|</th>
+    <th>|Álbum|</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @songs.each do |song| %>
+    <tr>
+      <td><%= song.name %></td>
+      <td><%= song.explicity.explicity %></td>
+      <td><%= song.gender.gender %></td>
+      <td><%= song.album.album_name %></td>
+      <td><%= link_to 'Detalhes', song_path(song) %></td>
+      <td><%= link_to 'Editar', edit_song_path(song) %></td>
+      <td><%= button_to 'Deletar', song_path(song), method: :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Inserir nova Música', new_song_path %>
+<%= link_to 'Página inicial', root_path%>>

@@ -1,0 +1,1 @@
+Bom, na primeira página eu criei um atalho pra a parte do bootstrap já, que não foi pedido, e coloquei uns carros a mais kk, creio q nem precisava mas na real q deu vontade, achei q podia dar uma complementada rs
